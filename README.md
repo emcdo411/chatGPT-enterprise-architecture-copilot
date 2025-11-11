@@ -66,30 +66,30 @@ This is the **main orchestration view** showing how the skill turns one prompt i
 ```mermaid
 flowchart TD
     subgraph Users
-        A1[Enterprise Architects]
-        A2[CTOs / CIOs]
-        A3[Pre-Sales Engineers]
+        A1["Enterprise Architects"]
+        A2["CTOs / CIOs"]
+        A3["Pre-Sales Engineers"]
     end
 
     subgraph ChatGPT_Enterprise
-        G4[ChatGPT\nSolutions Architect Skill]
-        CP[Context Parser\n(JSON + NLP)]
-        RE[Reasoning Engine\n(Phase 1–3)]
+        G4["ChatGPT\nSolutions Architect Skill"]
+        CP["Context Parser\nJSON & NLP"]
+        RE["Reasoning Engine\nPhases 1-3"]
     end
 
     subgraph Orchestration
-        OR[Internal Orchestrator\n(Airflow / Prefect / n8n)]
-        EX[Code Execution\n(Python REPL)]
-        LOG[Telemetry Stream\n(Datadog / Prometheus)]
+        OR["Internal Orchestrator\n(Airflow / Prefect / n8n)"]
+        EX["Code Execution\n(Python REPL)"]
+        LOG["Telemetry Stream\n(Datadog / Prometheus)"]
     end
 
     subgraph Outputs
-        D1[Architecture Diagrams\n(Mermaid)]
-        D2[Migration Gantt\n(Interactive)]
-        D3[Risk Register\n(Table)]
-        D4[TCO Calculator\n(Pandas)]
-        D5[Executive Summary\n(Docx)]
-        D6[Whitepaper\n(Docx)]
+        D1["Architecture Diagrams\n(Mermaid)"]
+        D2["Migration Gantt\n(Interactive)"]
+        D3["Risk Register\n(Table)"]
+        D4["TCO Calculator\n(Pandas)"]
+        D5["Executive Summary\n(Docx)"]
+        D6["Whitepaper\n(Docx)"]
     end
 
     A1 --> G4
@@ -116,6 +116,7 @@ flowchart TD
     class G4,CP,RE chatgpt
     class OR,EX,LOG orch
     class D1,D2,D3,D4,D5,D6 output
+
 ```
 
 **Core pattern (ETL for Architecture):**
