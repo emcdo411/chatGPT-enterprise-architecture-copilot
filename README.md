@@ -135,47 +135,47 @@ This diagram is your **FRED-like one pager** to drop into slides, whitepapers, o
 flowchart TD
     %% Title
     classDef title fill:#1565C0,stroke:#0D47A1,color:white,font-weight:bold
-    T[FRED-Style AI Orchestration Simulation\nChatGPT Enterprise Edition]:::title
+    T["FRED-Style AI Orchestration Simulation - ChatGPT Enterprise Edition"]:::title
 
     %% Users
-    subgraph Users [Users]
-        U1[Enterprise Architects]
-        U2[CTOs / CIOs]
-        U3[Pre-Sales Engineers]
+    subgraph Users
+        U1["Enterprise Architects"]
+        U2["CTOs / CIOs"]
+        U3["Pre-Sales Engineers"]
     end
 
     %% ChatGPT Core
-    subgraph ChatGPT [ChatGPT Enterprise]
-        G4[ChatGPT\nSolutions Architect Skill]
-        CP[Discovery Context Parser\n(JSON Output)]
-        P1[Phase 1: Discovery]
-        P2[Phase 2: Design]
-        P3[Phase 3: Roadmap]
+    subgraph ChatGPT_Enterprise
+        G4["ChatGPT - Solutions Architect Skill"]
+        CP["Discovery Context Parser - JSON Output"]
+        P1["Phase 1: Discovery"]
+        P2["Phase 2: Design"]
+        P3["Phase 3: Roadmap"]
     end
 
     %% Orchestration & Execution
-    subgraph Orchestration [Orchestration Layer]
-        OR[Workflow Orchestrator\n(Airflow / n8n)]
-        EX[Code Execution\n(Python REPL)]
-        LOG[Real-Time Telemetry\n(Datadog Dashboard)]
+    subgraph Orchestration
+        OR["Workflow Orchestrator - Airflow / n8n"]
+        EX["Code Execution - Python REPL"]
+        LOG["Real-Time Telemetry - Datadog Dashboard"]
     end
 
     %% ETL Pipeline
-    subgraph ETL [ETL / Data Flow Pattern]
-        SRC[Source: User Prompt]
-        TRANS[Transform: Skill + Code]
-        LOAD[Load: Docs, Diagrams, Decisions]
+    subgraph ETL
+        SRC["Source: User Prompt"]
+        TRANS["Transform: Skill + Code"]
+        LOAD["Load: Docs, Diagrams, Decisions"]
         SRC --> TRANS --> LOAD
     end
 
     %% Outputs
-    subgraph Outputs [Output Artifacts]
-        D1[Mermaid Architecture\nDiagram]
-        D2[Gantt Migration\nRoadmap]
-        D3[Risk Register\n(Table)]
-        D4[TCO Calculator\n(Pandas)]
-        D5[Executive Summary\n(.docx)]
-        D6[Whitepaper\n(.docx)]
+    subgraph Outputs
+        D1["Mermaid Architecture Diagram"]
+        D2["Gantt Migration Roadmap"]
+        D3["Risk Register Table"]
+        D4["TCO Calculator - Pandas"]
+        D5["Executive Summary - DOCX"]
+        D6["Whitepaper - DOCX"]
     end
 
     %% Connections
@@ -216,12 +216,13 @@ flowchart TD
 
     %% Legend
     subgraph Legend
-        L1[ChatGPT Core]:::chatgpt
-        L2[Orchestration]:::orch
-        L3[ETL Flow]:::etl
-        L4[Outputs]:::output
-        L5[Users]:::user
+        L1["ChatGPT Core"]:::chatgpt
+        L2["Orchestration"]:::orch
+        L3["ETL Flow"]:::etl
+        L4["Outputs"]:::output
+        L5["Users"]:::user
     end
+
 ```
 
 ---
@@ -236,22 +237,23 @@ gantt
     dateFormat  YYYY-MM-DD
 
     section Phase 0: Skill Activation
-    Deploy Skill + Context Parser     :p0, 2025-11-11, 3d
-    Validate Output Tags              :after p0, 2d
+    Deploy_Skill_and_Context_Parser     :p0, 2025-11-11, 3d
+    Validate_Output_Tags                :after p0, 2d
 
     section Phase 1: Pilot Simulation
-    Wire Code Execution               :p1, 2025-11-18, 7d
-    Build Telemetry Dashboard         :parallel, 7d
-    Run 3 Live Demos                  :2025-11-25, 10d
+    Wire_Code_Execution                 :p1, 2025-11-18, 7d
+    Build_Telemetry_Dashboard           :after p1, 7d
+    Run_Three_Live_Demos                :2025-11-25, 10d
 
     section Phase 2: Industrialization
-    Template 5 Use Cases              :p2, 2025-12-05, 14d
-    Integrate with Jira/Confluence    :parallel, 10d
+    Template_Five_Use_Cases             :p2, 2025-12-05, 14d
+    Integrate_with_Jira_and_Confluence  :after p2, 10d
 
     section Phase 3: Enterprise Launch
-    Architect Training                :p3, 2026-01-01, 14d
-    Policy: "All >$500K initiatives require ChatGPT Skill package" :milestone, 2026-01-15
-    Full Rollout                      :2026-01-20, 10d
+    Architect_Training                   :p3, 2026-01-01, 14d
+    Policy_All_Large_Initiatives_Use_ChatGPT_Skill :milestone, 2026-01-15, 1d
+    Full_Rollout                         :2026-01-20, 10d
+
 ```
 
 **Cutover strategy:**
